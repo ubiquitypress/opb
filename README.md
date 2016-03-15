@@ -23,4 +23,4 @@ then cd into the generic plugins folder
 
 and clone this repo
 
-```git clone https://github.com:ubiquitypress/opb.git```
+```git clone https://github.com/ubiquitypress/opb```
