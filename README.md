@@ -5,10 +5,6 @@ To get started you must clone the UP OJS Fork:
 
 ```git clone https://github.com/ubiquitypress/ojs```
 
-we also want the PKP Library and other sub modules so cd into the repo:
-
-```git submodule update --init --recursive```
-
 Our commits are on the 2.4.8 branch so you'll need to check it and the PKP lib out.
 
 ```
@@ -17,12 +13,9 @@ cd lib/pkp
 git checkout ojs-stable-2_4_8
 ```
 
-2.4.8 uses composer so we need to run:
+we also want the PKP Library and other sub modules so cd into the repo:
 
-```
-cd lib/pkp
-composer.phar update
-```
+```git submodule update --init --recursive```
 
 then cd into the generic plugins folder
 
