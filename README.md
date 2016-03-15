@@ -17,6 +17,13 @@ cd lib/pkp
 git checkout ojs-stable-2_4_8
 ```
 
+2.4.8 uses composer so we need to run:
+
+```
+cd lib/pkp
+composer.phar update
+```
+
 then cd into the generic plugins folder
 
 ```cd ojs/plugins/generic/```
