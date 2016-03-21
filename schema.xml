@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE schema SYSTEM "../../../lib/pkp/dtd/xmlSchema.dtd">
+
+<!--
+  * schema.xml
+  *
+  * Copyright (c) 2003-2011 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * XML Galley plugin schema in XML.
+  *
+  * $Id$
+  -->
+
+<schema version="0.2">
+
+	<!--
+	 *
+	 * TABLE article_opb_badges
+	 *
+	 -->
+	<table name="article_opb_badges">
+
+		<field name="badge_award_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+
+		<field name="article_id" type="I8">
+			<NOTNULL/>
+		</field>
+
+		<!-- Open Data Badge -->
+		<field name="open_data" type="L">
+		</field>
+		<field name="open_data_url" type="C2" size="500">
+		</field>
+		<field name="open_data_explaination" type="B">
+		</field>
+
+
+		<!-- Open Materials Badge -->
+		<field name="open_materials" type="L">
+		</field>
+		<field name="open_materials_url" type="C2" size="500">
+		</field>
+		<field name="open_materials_explaination" type="B">
+		</field>
+
+
+		<!-- Prereg Badge -->
+		<field name="pre_reg" type="L">
+		</field>
+		<field name="pre_reg_url" type="C2" size="500">
+		</field>
+		<field name="pre_reg_registered" type="B">
+		</field>
+		<field name="pre_reg_additional" type="B">
+		</field>
+		<field name="pre_reg_changes" type="B">
+		</field>
+		<field name="pre_reg_description" type="B">
+		</field>
+
+
+
+		<!-- Prereg Plus Badge -->
+		<field name="pre_reg_plus" type="L">
+		</field>
+
+		<descr>OSF/COS Open Practice Badges</descr>
+	</table>
+
+	<!--
+	 *
+	 * TABLE article_opb_badges
+	 *
+	 -->
+
+	<table name="article_opb_review_claims">
+
+		<field name="badge_review_id" type="I8">
+			<KEY/>
+			<AUTOINCREMENT/>
+		</field>
+
+		<field name="badge_award_id" type="I8">
+			<NOTNULL/>
+		</field>
+
+		<field name="article_id" type="I8">
+			<NOTNULL/>
+		</field>
+
+		<field name="reviewer_id" type="I8">
+			<NOTNULL/>
+		</field>
+
+		<!-- Open Data Badge -->
+		<field name="open_data" type="L">
+		</field>
+
+		<!-- Open Materials Badge -->
+		<field name="open_materials" type="L">
+		</field>
+
+		<!-- Prereg Badge -->
+		<field name="pre_reg" type="L">
+		</field>
+
+
+		<descr>OSF/COS Open Practice Badges</descr>
+	</table>
+
+</schema>
