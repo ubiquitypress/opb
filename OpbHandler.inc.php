@@ -165,11 +165,8 @@ class OpbHandler extends Handler {
 		$params = array();
 		$params["article_id"] = $post["article_id"];
 
-		var_dump($claims);
-
 		foreach ($claims as $badge => $val) {
 			$current = $post['badge'][$badge];
-			echo $badge;
 			if ($badge == "opendata") {
 				$params["open_data"] = 1;
 				$params["open_data_url"] = $current["doi"];
@@ -192,19 +189,20 @@ class OpbHandler extends Handler {
 			} 
 
 		}
-		if (!in_array("opendata", $claims)) {
+		var_dump($claims);
+		if (!$claims["opendata"]) {
 				$params["open_data"] = NULL;
 				$params["open_data_url"] = NULL;
 				$params["open_data_explaination"] = NULL;
 		}
 
-		if (!in_array("openmaterials", $claims)) {
+		if (!$claims["openmaterials"]) {
 				$params["open_materials"] = 1;
 				$params["open_materials_url"] = $current["doi"];
 				$params["open_materials_explaination"] = $current["explain"];
 		}
 
-		if (!in_array("openprereg", $claims)) {
+		if (!$claims["openprereg"]) {
 				$params["pre_reg"] = NULL;
 				$params["pre_reg_url"] = NULL;
 				$params["pre_reg_registered"] = NULL;
@@ -212,6 +210,8 @@ class OpbHandler extends Handler {
 				$params["pre_reg_changes"] = NULL;
 				$params["pre_reg_description"] =  NULL;
 		}
+
+		var_dump($params);
 		
 		return $params;
 	}
